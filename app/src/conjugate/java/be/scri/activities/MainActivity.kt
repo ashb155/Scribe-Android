@@ -9,6 +9,7 @@ package be.scri.activities
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import be.scri.ui.screens.ConjugateAboutScreen
 import be.scri.ui.screens.SampleScreen
 
 /**
@@ -24,7 +25,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            SampleScreen()
+            ConjugateAboutScreen(
+                onPrivacyPolicyClick = {},
+                onThirdPartyLicensesClick = {},
+                onWikiClick = {},
+                resetHints = {},
+                context = this,
+            )
         }
     }
 }

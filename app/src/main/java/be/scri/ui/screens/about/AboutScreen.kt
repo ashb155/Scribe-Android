@@ -35,7 +35,8 @@ fun AboutScreen(
     resetHints: () -> Unit,
     context: Context,
     modifier: Modifier = Modifier,
-) {
+    isConjugateApp: Boolean = false,
+){
     val scrollState = rememberScrollState()
 
     val communityList =
@@ -45,6 +46,7 @@ fun AboutScreen(
             },
             onShareScribeClick = { AboutUtil.onShareScribeClick(context) },
             context = context,
+            isConjugateApp = isConjugateApp,
         )
 
     val feedbackAndSupportList =
@@ -56,6 +58,7 @@ fun AboutScreen(
                 resetHints()
             },
             context = context,
+            isConjugateApp = isConjugateApp,
         )
 
     val legalItemsList =
