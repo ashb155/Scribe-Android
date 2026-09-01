@@ -152,7 +152,7 @@ fun HintDialogContent(
             ) {
                 Icon(
                     painter = painterResource(R.drawable.light_bulb_icon),
-                    contentDescription = "Hint",
+                    contentDescription = stringResource(R.string.i18n_app__global_hint),
                     tint = Color(0xFFFDAD0D),
                     modifier =
                         Modifier
