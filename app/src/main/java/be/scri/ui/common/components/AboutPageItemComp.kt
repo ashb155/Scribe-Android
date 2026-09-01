@@ -37,6 +37,7 @@ fun AboutPageItemComp(
     trailingIcon: Int,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    descText: String? = null,
     altText: String? = null,
 ) {
     val semanticsModifier =
@@ -73,12 +74,23 @@ fun AboutPageItemComp(
                 contentDescription = stringResource(R.string.i18n_app_accessibility_leading_icon),
             )
             Spacer(modifier = Modifier.width(8.dp))
-            Text(
-                text = title,
+            androidx.compose.foundation.layout.Column(
                 modifier = Modifier.weight(1f).padding(start = 4.dp),
-                color = MaterialTheme.colorScheme.onSurface,
-                style = MaterialTheme.typography.bodyMedium,
-            )
+            ) {
+                Text(
+                    text = title,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                if (descText != null) {
+                    Text(
+                        text = descText,
+                        color = Color.Gray,
+                        style = MaterialTheme.typography.bodySmall,
+                        modifier = Modifier.padding(top = 4.dp),
+                    )
+                }
+            }
             Icon(
                 painter = painterResource(trailingIcon),
                 modifier =
