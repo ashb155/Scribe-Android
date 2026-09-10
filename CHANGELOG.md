@@ -84,6 +84,10 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 
 - Functions in the application have been documented ([#18](https://github.com/scribe-org/Scribe-Android/issues/18), [#354](https://github.com/scribe-org/Scribe-Android/issues/354)).
 
+### 🔒 Security
+
+- Clipboard history is excluded from Android Auto Backup and device-to-device transfer so that copied text never leaves the device ([#695](https://github.com/scribe-org/Scribe-Android/issues/695)).
+
 ### ⚖️ Legal
 
 - All code has been developed under the GNU General Public License (GPL-3.0) ([#301](https://github.com/scribe-org/Scribe-Android/issues/301)).
@@ -94,3 +98,6 @@ Emojis for the following are chosen based on [gitmoji](https://gitmoji.dev/).
 ### ♻️ Code Refactoring
 
 - Code quality improvements were continuously done to assure that the application is easy to maintain and meets Kotlin standards ([#426](https://github.com/scribe-org/Scribe-Android/issues/426)).
+- `CommandHandler` was extracted from `GeneralKeyboardIME` to encapsulate command execution, Enter key dispatching, and lookup state machine logic ([#426](https://github.com/scribe-org/Scribe-Android/issues/426)).
+- Introduced `KeyboardIMEContext` interface contract to decouple handler dependencies from the concrete `GeneralKeyboardIME` class ([#426](https://github.com/scribe-org/Scribe-Android/issues/426)).
+
