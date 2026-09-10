@@ -449,7 +449,7 @@ private fun ConjugationCell(
                 .clickable {
                     clipboardManager.setText(AnnotatedString(form))
                     Toast
-                        .makeText(context, "Copied to clipboard", Toast.LENGTH_SHORT)
+                        .makeText(context, R.string.i18n_app_clipboard_copied_to_clipboard,Toast.LENGTH_SHORT)
                         .show()
                 }.padding(horizontal = 12.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.SpaceBetween,
