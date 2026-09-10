@@ -213,7 +213,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.compose.ui:ui")
     detektPlugins("io.nlopez.compose.rules:detekt:0.4.17")
     lintChecks("com.slack.lint.compose:compose-lint-checks:1.4.2")
 
